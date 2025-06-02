@@ -1,0 +1,156 @@
+<span style="font-family: verdana, geneva, sans-serif;">
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Register |Divine Yoga</title>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="style.css" >
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet"/>
+        <script>
+            // Check if the first letter is uppercase
+            function startsWithUpperCase(str) {
+                return /^[A-Z]/.test(str);
+            }
+
+            function validateFirstName() {
+                var firstName = document.forms["registerForm"]["firstName"].value.trim(); // Trim spaces
+                var error = document.getElementById("firstNameError");
+                if (firstName == "") {
+                    error.textContent = "First Name is required";
+                    return false;
+                } else if (!startsWithUpperCase(firstName)) {
+                    error.textContent = "First Name should start with a capital letter";
+                    return false;
+                } else {
+                    error.textContent = "";
+                    return true;
+                }
+            }
+
+            function validateLastName() {
+                var lastName = document.forms["registerForm"]["lastName"].value.trim(); // Trim spaces
+                var error = document.getElementById("lastNameError");
+                if (lastName == "") {
+                    error.textContent = "Last Name is required";
+                    return false;
+                } else if (!startsWithUpperCase(lastName)) {
+                    error.textContent = "Last Name should start with a capital letter";
+                    return false;
+                } else {
+                    error.textContent = "";
+                    return true;
+                }
+            }
+
+            function validateEmail() {
+                var email = document.forms["registerForm"]["email"].value.trim(); // Trim spaces
+                var error = document.getElementById("emailError");
+                var emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+                if (email == "") {
+                    error.textContent = "Email is required";
+                    return false;
+                } else if (!email.match(emailPattern)) {
+                    error.textContent = "Please enter a valid email";
+                    return false;
+                } else {
+                    error.textContent = "";
+                    return true;
+                }
+            }
+
+            function validatePassword() {
+                var password = document.forms["registerForm"]["password"].value.trim(); // Trim spaces
+                var error = document.getElementById("passwordError");
+                
+                // Regular expression to check for special character
+                var specialCharPattern = /[!@#$%^&*(),.?":{}|<>]/;
+
+                if (password == "") {
+                    error.textContent = "Password is required";
+                    return false;
+                } else if (password.length < 8) {
+                    error.textContent = "Password must be at least 8 characters";
+                    return false;
+                } else if (!specialCharPattern.test(password)) {
+                    error.textContent = "Password must include at least one special character";
+                    return false;
+                } else {
+                    error.textContent = "";
+                    return true;
+                }
+            }
+
+            function validateConfirmPassword() {
+                var password = document.forms["registerForm"]["password"].value.trim(); // Trim spaces
+                var confirmPassword = document.forms["registerForm"]["confirmPassword"].value.trim(); // Trim spaces
+                var error = document.getElementById("confirmPasswordError");
+                if (confirmPassword == "") {
+                    error.textContent = "Confirm Password is required";
+                    return false;
+                } else if (password != confirmPassword) {
+                    error.textContent = "Passwords do not match";
+                    return false;
+                } else {
+                    error.textContent = "";
+                    return true;
+                }
+            }
+
+            function validateForm() {
+                console.log("Form is being validated...");
+                // Run individual field validations
+                if (
+                    validateFirstName() &&
+                    validateLastName() &&
+                    validateEmail() &&
+                    validatePassword() &&
+                    validateConfirmPassword()
+                ) {
+                    alert("Registration successful!");
+                    return true;
+                } else {
+                    return false; // Prevent submission if validation fails
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <div class="signup-box">
+	    <div class="company-header">
+    		<img src="assets/logo.png" alt="logo">
+    		<h5>DIVINE YOGA</h5>
+	    </div>
+            <h1>Registration</h1>
+            <h4>It's free and only takes a minute</h4>
+            <form name="registerForm" onsubmit="return validateForm()">
+                <label>First Name</label>
+                <input type="text" name="firstName" placeholder="Enter your first name" onblur="validateFirstName()">
+                <div class="error" id="firstNameError"></div>
+                
+                <label>Last Name</label>
+                <input type="text" name="lastName" placeholder="Enter your last name" onblur="validateLastName()">
+                <div class="error" id="lastNameError"></div>
+                
+                <label>Email</label>
+                <input type="email" name="email" placeholder="Enter your email" onblur="validateEmail()">
+                <div class="error" id="emailError"></div>
+                
+                <label>Password</label>
+                <input type="password" name="password" placeholder="Password" onblur="validatePassword()">
+                <div class="error" id="passwordError"></div>
+                
+                <label>Confirm Password</label>
+                <input type="password" name="confirmPassword" placeholder="Confirm Password" onblur="validateConfirmPassword()">
+                <div class="error" id="confirmPasswordError"></div>
+                
+                <input type="submit" value="Register">
+		<a class="goback" href="index.html">GO BACK</a>
+            </form>
+            <p>
+                By clicking the Register button, you agree to our 
+                <a href="#">Terms and Conditions</a> and <a href="#">Privacy Policy</a>
+            </p>
+        </div>
+    </body>
+</html>

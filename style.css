@@ -1,0 +1,118 @@
+body {
+    background-color: #9c4f99c8;
+    font-family: "Roboto", sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.signup-box {
+    width: 400px;
+    height:69s0px;
+    margin: auto;
+    background-color: white;
+    border-radius: 15px;
+    padding: 10px;
+    display: block;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.company-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 2px;
+    text-align: center;
+}
+
+.company-header img {
+    max-width: 70px;
+    margin: 0 2px;
+}
+
+.company-header h5 {
+    margin: 0 2px; 
+    display: inline;
+}
+
+h1 {
+  text-align: center;
+  padding-top:0px;
+  margin-top:5px;
+}
+
+h4 {
+  text-align: center;
+}
+
+.signup-box form {
+  width: 300px;
+  margin-left: 20px;
+  padding-left: 30px;
+  display: block;
+  justify-content: center;
+  align-items: center;
+}
+
+.signup-box form label {
+  display: flex;
+  margin-top: 20px;
+  font-size: 18px;
+}
+
+.signup-box form input {
+  width: 100%;
+  padding: 7px;
+  border: none;
+  border: 1px solid gray;
+  border-radius: 6px;
+  outline: none;
+  align-items: center;
+}
+
+.signup-box [type="submit"] {
+  width: 320px;
+  height: 35px;
+  margin-top: 20px;
+  border: none;
+  position: relative;
+  right:10px;
+  background-color: #9c4f99c8;
+  color: white;
+  font-size: 18px;
+}
+
+.error{
+  color: red;
+  font-size: 12px;
+}
+
+.signup-box [type="submit"]:hover {
+    background-color: rgb(164, 64, 141);
+}
+
+.goback{
+    display:flex;
+    justify-content:center;
+    padding-top:10px;
+    font-size:12px;
+}
+
+p {
+  text-align: center;
+  padding-top: 5px;
+  font-size: 15px;
+}
+
+.para-2 {
+  text-align: center;
+  color: white;
+  font-size: 10px;
+  margin-top: -10px;
+}
+
+.para-2 a {
+  color: #000000;
+}

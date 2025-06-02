@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="styles.css" />
+        <script src="main.js"></script>
+        <title>About|Divine Yoga</title>
+    </head>
+    <body>
+        <nav aria-label="Primary Navigation" class="navbar">
+            <div class="nav__logo">
+                <img src="assets/logo.png" alt="Divine Yoga logo" />
+                <span>DIVINE YOGA</span>
+            </div>
+            <ul class="nav__links" id="nav-links">
+                <li class="link"><a href="index.html" aria-label="Go to Home Page" tabindex="0">Home</a></li>
+                <li class="link"><a href="class.html" aria-label="Go to Classes Page" tabindex="0">Classes</a></li>
+                <li class="link"><a href="membership.html" aria-label="Go to Membership Page" tabindex="0">Membership</a></li>
+                <li class="link"><a href="about.html" aria-label="Go to About Page" tabindex="0">About</a></li>
+                <li class="link"><a href="blog.html" aria-label="Go to Blog Page" tabindex="0">Blog</a></li>
+                <li class="link"><a href="contact.html" aria-label="Go to Contact Page" tabindex="0">Contact</a></li>
+            </ul>
+        
+            <!-- Hamburger Icon for Mobile Menu -->
+            <div class="hamburger" id="hamburger">
+                ☰
+            </div>
+        </nav>
+        
+        <!-- JavaScript to toggle mobile menu -->
+        <script>
+            const hamburger = document.getElementById('hamburger');
+            const navLinks = document.getElementById('nav-links');
+        
+            hamburger.addEventListener('click', () => {
+                navLinks.classList.toggle('active');
+            });
+        </script>
+        
+        <section class="section__container stories__container" id="stories">
+            <p class="section__subheader">TESTIMONY</p>
+            <h2 class="section__header">Successful Stories</h2>
+            <div class="stories__grid">
+                <div class="stories__card">
+                    <div class="stories__content">
+                        <span><i class="ri-double-quotes-l"></i></span>
+                        <p>
+                        This yoga website has been a game-changer for me. The variety of
+                        classes and guided sessions have not only improved my flexibility
+                        but also brought a sense of calm to my hectic days.
+                        </p>
+                    </div>
+                    <div class="stories__author">
+                        <img src="assets/stories-2.jpg" alt="author" />
+                        <div class="stories__author__details">
+                            <h4>Rohan Hegde</h4>
+                            <h6>Trainer</h6>
+                        </div>
+                    </div>
+                </div>
+                <div class="stories__card">
+                    <div class="stories__content">
+                        <span><i class="ri-double-quotes-l"></i></span>
+                        <p>
+                            The tailored sessions and expert guidance have not only eased my
+                            discomfort but also boosted my overall well-being. A fantastic
+                            resource for both beginners and experienced yogis.
+                        </p>
+                    </div>
+                    <div class="stories__author">
+                        <img src="assets/stories-1.jpg" alt="author" />
+                        <div class="stories__author__details">
+                            <h4>Ram Shukla</h4>
+                            <h6>Member</h6>
+                        </div>
+                    </div>
+                </div>
+                <div class="stories__card">
+                    <div class="stories__content">
+                        <span><i class="ri-double-quotes-l"></i></span>
+                        <p>
+                            The on-demand classes allow me to practice whenever I can, and the
+                            mindfulness exercises have brought a new level of clarity to my
+                            life.A must-visit for anyone seeking holistic wellness.
+                        </p>
+                    </div>
+                    <div class="stories__author">
+                        <img src="assets/stories-3.jpg" alt="author" />
+                        <div class="stories__author__details">
+                            <h4>Smitha Patel</h4>
+                            <h6>Member</h6>
+                        </div>
+                    </div>
+                </div>
+                
+                
+                
+            
+        </section>
+      
+        <section class="banner">
+            <div class="section__container banner__container">
+                <div class="banner__card">
+                    <h4>5,000</h4>
+                    <p>Happy Customers</p>
+                </div>
+                <div class="banner__card">
+                    <h4>2,560</h4>
+                    <p>Yoga Workshops</p>
+                </div>
+                <div class="banner__card">
+                    <h4>10+</h4>
+                    <p>Years of Experience</p>
+                </div>
+                <div class="banner__card">
+                    <h4>900</h4>
+                    <p>Lesson Conducted</p>
+                </div>
+            </div>
+        </section>
+        <footer>
+            <div class="footer-container">
+                <div class="footer-column">
+                    <h3>ABOUT US</h3>
+                    <p>Welcome to YogaLife, where we bring mindfulness and peace to your everyday life through yoga. Join us for a journey of wellness and balance.</p>
+                </div>
+                <div class="footer-column">
+                    <h3>QUICK LINKS</h3>
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Classes</a></li>
+                        <li><a href="#">Membership</a></li>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>CONTACT US</h3>
+                    <p><i class="fa fa-map-marker"></i> Royal Embassy,Near Tiger circe,Manipal,Karnataka,576104</p>
+                    <p><i class="fa fa-phone"></i> +91 9087654321</p>
+                    <p><i class="fa fa-envelope"></i> info@yogalife.com</p>
+                </div>
+                <div class="footer-column">
+                    <h3>FOLLOW US</h3>
+                    <ul class="social-links"></ul>
+                  </ul>  
+                  <div class="social-icons">         
+                        <a href="https://www.facebook.com/TheAkshayaPatraFoundation/"><img src="https://img.icons8.com/?size=48&id=ddJXF_L1PvL_&format=png" ></a>
+                        <a href="https://twitter.com/i/flow/login?redirect_after_login=%2Fjeevfoundation"><img src="https://img.icons8.com/?size=80&id=6BmXkftCQhH8&format=png"></a>
+                       <a href="https://www.instagram.com/naik__varnitha/?igsh=Z3l3bjN4ejJuc2J5"><img src="https://img.icons8.com/?size=80&id=YtpeVQhQ8USm&format=png" ></a>
+                       <a href="https://chat.whatsapp.com/Bnai6nVdTk5BcG2m5G8XkI"><img src="https://cdn-icons-png.flaticon.com/128/1383/1383260.png" ></i></a>
+                       
+            </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 YogaLife. All Rights Reserved.</p>
+            </div>
+        </footer>
+    </body>
+</html>
